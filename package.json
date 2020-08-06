@@ -1,0 +1,64 @@
+{
+  "name": "@dking/markdown-webpack-loader",
+  "version": "0.0.1",
+  "description": "@dking/hasaki-cli init application",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "scripts": {
+    "lint": "eslint src --ext .jsx --ext .js --cache --fix"
+  },
+  "lint-staged": {
+    "**/*.{jsx,js}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "proseWrap": "preserve"
+  },
+  "devDependencies": {
+    "@dking/eslint-config-base": "^0.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7"
+  },
+  "dependencies": {
+    "loader-utils": "^2.0.0",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-anchor": "^5.3.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-implicit-figures": "^0.10.0",
+    "markdown-it-imsize": "^2.0.1",
+    "markdown-it-ins": "^3.0.0",
+    "markdown-it-kbd": "^2.2.0",
+    "markdown-it-mark": "^3.0.0",
+    "markdown-it-math": "^4.1.1",
+    "markdown-it-plantuml": "^1.4.1",
+    "markdown-it-smartarrows": "^1.0.1",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "markdown-it-table-of-contents": "^0.4.4",
+    "markdown-it-task-checkbox": "^1.0.6",
+    "markdown-it-underline": "^1.0.1",
+    "schema-utils": "^2.7.0"
+  }
+}

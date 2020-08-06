@@ -3,22 +3,22 @@
 - [English](README.en_US.md)
 - [简体中文](README.md)
 
-> 该 `markdown loader`文件加载器底层使用的是 `markdown-it` 渲染的，包含了很多 `markdown-it` 渲染插件， 支持大多数 `markdown` 语法功能
+> The `markdown loader` file loader use `markdown-it` as the core renderer, include many `markdown-it` rendering plug-ins, and supports most of the `markdown` syntax.
 
-- [安装](#安装)
-- [使用](#使用)
-- [配置](#配置)
-- [建议](#建议)
-- [markdown-it插件列表](#markdown-it插件列表)
+- [Install](#install)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [MarkdownIt-Plugin-List](#MarkdownIt-Plugin-List)
+- [Questions](#questions)
 - [License](#license)
 
-## 安装
+## Install
 ```bash
 $ npm i @dking/markdown-webpack-loader --dev
 $ yarn add @dking/markdown-webpack-loader -D 
 ```
 
-## 使用
+## Usage
 
 ```js
 // webpack.config.js
@@ -50,10 +50,10 @@ module.exports = {
 };
 ```
 
-## 配置
+## Configuration
 
 ```js
-// 所有可配置文件， 默认值
+// all loader options
 {
     options: {
         html       : false,
@@ -64,17 +64,16 @@ module.exports = {
         typographer: false,
         quotes     : '“”‘’',
         highlight  : null,
-       
+
         // 特殊配置
-        plugins: [], // string[], 支持动态扩充 markdown-it 插件， 如果不存在会报错，
-        disable: [], // string[], 禁用 markdown-it 插件， 按照规则匹配的不需要写全名， 找不到不会报错
+        plugins: [], // string[], Support dynamic add markdown it plug-in. If it does not exist, an error will be reported
+        disable: [], // string[], Disable the markdown it plug-in. If it is matched according to the rules, it is not necessary to write the full name. and if it is not found, no error will be reported
     }
 }
 ```
+> Tips: To view the full configuration details, click the link <https://markdown-it.github.io/markdown-it/#MarkdownIt.new>
 
-> Tips: 查看完整配置详情 点击链接 <https://markdown-it.github.io/markdown-it/#MarkdownIt.new>
-
-## markdown-it插件列表
+## MarkdownIt-Plugin-List
 `"markdown-it-abbr"`  
 `"markdown-it-anchor"`  
 `"markdown-it-attrs"`  
@@ -97,8 +96,8 @@ module.exports = {
 `"markdown-it-task-checkbox"`  
 `"markdown-it-underline"`  
 
-## 建议
-欢迎创建issue 或者 pr [here](https://github.com/JohnApache/markdown-webpack-loader/issues).
+## Questions
+Please open an issue [here](https://github.com/JohnApache/markdown-webpack-loader/issues).
 
 ## License
 
